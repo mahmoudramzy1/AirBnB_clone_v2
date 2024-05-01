@@ -146,7 +146,7 @@ class HBNBCommand(cmd.Cmd):
                     setattr(new_instance, k, v)
                 except ValueError:
                     continue
-            else:
+            elif v.isdigit():
                 try:
                     v = int(v)
                     setattr(new_instance, k, v)
