@@ -152,6 +152,8 @@ class HBNBCommand(cmd.Cmd):
                     setattr(new_instance, k, v)
                 except ValueError:
                     continue
+            else:
+                continue
         new_instance.save()
         print(new_instance.id)
         storage.save()
