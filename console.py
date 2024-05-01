@@ -135,7 +135,11 @@ class HBNBCommand(cmd.Cmd):
                 if '"' in v and (v.index('"') == 0 or (v.index('"') > 0 and v[v.index('"') - 1] != '//')):
                     continue 
                 v = v.replace('_', ' ')
-                setattr(new_instance, k, v)
+                try:
+                    v = str(v)
+                    setattr(new_instance, k, v)
+                except ValueError:
+                    continue
             elif '.' in v:
                 try:
                     v = float(v)
