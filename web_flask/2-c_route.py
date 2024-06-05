@@ -23,8 +23,8 @@ def hbnb():
 @app.route('/C/<text>', strict_slashes=False)
 def show_c(text):
     """Returns 'C ' followed by the value of the text variable"""
-	text = text.replace('_', ' ')
-	return 'C {}'.format(text)
+    text = text.replace('_', ' ')
+    return 'C {}'.format(text)
 
 
 if __name__ == '__main__':
