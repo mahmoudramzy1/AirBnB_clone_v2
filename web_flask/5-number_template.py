@@ -44,6 +44,7 @@ def number_display(n):
 @app.route('/number_template/<int:n>')
 def html_display(n):
     """Returns 'int ' followed by the value of the text variable"""
+    n = str(n)
     return render_template('5-number.html', n=n)
 
 
